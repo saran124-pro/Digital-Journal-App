@@ -20,13 +20,11 @@ function writeEntries(entries) {
   fs.writeFileSync(DATA_FILE, jsonString);
 }
 
-// GET all entries
 app.get('/api/entries', (req, res) => {
   const entries = readEntries();
   res.json(entries);
 });
 
-// GET a single entry
 app.get('/api/entries/:id', (req, res) => {
   const entries = readEntries();
   const entry = entries.find(e => String(e.id) === req.params.id);
@@ -36,7 +34,6 @@ app.get('/api/entries/:id', (req, res) => {
   res.json(entry);
 });
 
-// POST a new entry
 app.post('/api/entries', (req, res) => {
   const { title, content } = req.body;
 
@@ -59,7 +56,6 @@ app.post('/api/entries', (req, res) => {
   res.status(201).json(newEntry);
 });
 
-// PUT — update an existing entry
 app.put('/api/entries/:id', (req, res) => {
   const entries = readEntries();
   const entry = entries.find(e => String(e.id) === req.params.id);
@@ -81,7 +77,6 @@ app.put('/api/entries/:id', (req, res) => {
   res.json(entry);
 });
 
-// DELETE an entry
 app.delete('/api/entries/:id', (req, res) => {
   const entries = readEntries();
   const index = entries.findIndex(e => String(e.id) === req.params.id);
