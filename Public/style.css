@@ -9,7 +9,6 @@ body {
   padding: 40px 20px;
   min-height: 100vh;
 
-  /* Blurry background image */
   background-image:
     linear-gradient(rgba(40, 20, 60, 0.35), rgba(20, 10, 40, 0.35)),
     url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
