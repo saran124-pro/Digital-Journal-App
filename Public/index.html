@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Digital Journal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📔 My Digital Journal</h1>
+
+    <form id="entry-form">
+      <input type="hidden" id="entry-id">
+      <input type="text" id="title" placeholder="Title" required>
+      <textarea id="content" placeholder="Write your thoughts..." required></textarea>
+      <div class="form-buttons">
+        <button type="submit" id="submit-btn">Add Entry</button>
+        <button type="button" id="cancel-btn" style="display:none;">Cancel Edit</button>
+      </div>
+    </form>
+
+    <div id="entries-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
